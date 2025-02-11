@@ -11,14 +11,23 @@ This small, desktop shaker table is made to simulate these vibrations, primarily
 The goals for this project were outlined as follows:
 
 -Output accurate and repeatable motion
+
 -The table should be able to reach a frequency with a +/-.5Hz error
+
 -Keep table small and light for easy transport
+
 -Easily adjustable amplitude and frequency
+
 -User friendly interface
--Be able to simulate multiple types of vibration profiles
+
+-Be able to simulate multiple types of vibration profiles:
+
     -High resonant frequencies (sine wave)
+    
     -Saw wave
+    
     -Square wave
+    
     -Random 
 
 
