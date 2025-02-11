@@ -34,7 +34,14 @@ The goals for this project were outlined as follows:
 # Hardware
 To meet the goals outlined above, a NEMA 17-60mm stepper motor is used with a GT3 belt drive. This simple, cost effective design would also allow different types of vibration profiles to be ran.
 
-The table is currently controlled by an Arduino Uno with the Accel Stepper library, though in the future it may be upgraded to use G-Code and a RPi as a head computer since there are some issues with the current setup, which are described further down in this document.
+The table is currently controlled by an Arduino Uno R3 with the Accel Stepper library. 
+
+A TB6600, a common stepper motor driver, is used to control the NEMA-17.
+
+A dedicated 24V, 15A power supply is used to power the stepper motor driver, to provide a larger working range for the stepper motor, without worry of brownout. Orignally, a smaller 12V, 5A power supply was used with a 3D printer stepper driver, but this caused many issues. At lower speeds, the motor failed to move at all, while at higher speeds the motor would shudder and move unpredicatably. This was due to a lack of amperage, and the lower voltage limited the max speed of the motor, as seen below. 
+
+![Screenshot 2025-02-11 164128](https://github.com/user-attachments/assets/93bf9890-6eea-4ea7-b9e4-4a03056dfb68)
+
 
 # Software
 All software is written in Arduino's IDE, and uses the AccelStepper Library. The control interface is currently ran within the IDE Serial Monitor.
