@@ -53,7 +53,7 @@ Resonance (Sine Wave) Control:
 
 # Results
 
--coming soon
+Coming soon, as the table is still going under testing. 
 
 # Resources
 AccelStepper Documentation:
