@@ -53,6 +53,7 @@ Resonance (Sine Wave) Control:
 
 # Results
 
+-coming soon
 
 # Resources
 AccelStepper Documentation:
@@ -61,9 +62,6 @@ https://www.airspayce.com/mikem/arduino/AccelStepper/classAccelStepper.html
 BOM For Shaker Table V-2:
 https://hartford0-my.sharepoint.com/:x:/g/personal/forcier_hartford_edu/EQoHR8bn9C1Muq9yt1xqKHYBLXRtwSA_wKFjgTQhrU4cBg?e=nmwIVy 
 https://hartford0-my.sharepoint.com/:x:/g/personal/forcier_hartford_edu/EWN45QMFNgpOj6hBR95E2YwBf9stVtuqGKyqXrFxbaF5FQ?e=qKB1Xl 
-
-Development Log/Journal:
-Shaker Table Independent Study.docx
 
 CAD:
 https://cad.onshape.com/documents/7bd40d5f0396d9dd7bc3818a/w/cac37c4a6c6fd51dcfd15dc9/e/18fd263725c2068835e900cc?renderMode=0&uiState=663d1e92c250c04b90a2f304 
