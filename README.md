@@ -53,12 +53,13 @@ This function controls the motion of the shaker table in a sinusoidal motion. Th
 
 For the Shaker Table, the maximum acceleration is calculated from the given frequency and amplitude. 
 
-x(t) = A * sin(ω * t + θ)
-v(t) = A * ω * sin(ω * t + θ)
-a(t) = -A * ω^2 * sin(ω * t + θ)
+    x(t) = A * sin(ω * t + θ)
+    v(t) = A * ω * sin(ω * t + θ)
+    a(t) = -A * ω^2 * sin(ω * t + θ)
 
 To calculate maximum acceleration, this equation is used:
-a = (2 * π * f)^2 * A
+
+    a = (2 * π * f)^2 * A
 
 
 
