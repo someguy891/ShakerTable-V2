@@ -27,16 +27,18 @@ void setup() {
 
 void squareControl(double maxVin, double ampIn) {
   const double stepsPmm = 5;
-  int amplitudeSteps = ampIn / distPerRev * stepsPerRev;
+  int amplitudeSteps = ampIn / distPerRev * stepsPerRev; //calc amplitude in steps
   Serial.println(amplitudeSteps);
   //amplitudeSteps = amplitudeSteps/2;
 
-  double maxV = maxVin * stepsPmm;
+  double maxV = maxVin * stepsPmm;//calc max vel for control
   stepper.disableOutputs();
 
   stepper.setMaxSpeed(maxV);
   stepper.setSpeed(maxV);
-  stepper.setAcceleration(99999999);
+
+  //max acceleration is set to be infinite to attempt to get to maxV is fast as possible
+  stepper.setAcceleration(99999999); 
   stepper.moveTo(amplitudeSteps);
 
   Serial.println("starting");
@@ -57,17 +59,17 @@ void squareControl(double maxVin, double ampIn) {
 //-----------------------------RESONANCE-----------------------
 void resonanceControl(double freqIn, double ampIn) {
 
-  int amplitudeSteps = ampIn / distPerRev * stepsPerRev;
+  int amplitudeSteps = ampIn / distPerRev * stepsPerRev; //calc amplitude in steps
   amplitudeSteps = amplitudeSteps / 2;
   Serial.println(amplitudeSteps);
-  int stepVMax = freqIn * stepsPerRev;
-  accel = pow((2 * PI * freqIn), 2) * amplitudeSteps;
+  int stepVMax = freqIn * stepsPerRev; //calc max vel for control
+  accel = pow((2 * PI * freqIn), 2) * amplitudeSteps; //calc max accel for control
   Serial.println(accel);
 
-  stepper.setMaxSpeed(10000000000);
-  stepper.setSpeed(stepVMax);
-  stepper.setAcceleration(accel);
-  stepper.moveTo(amplitudeSteps);
+  stepper.setMaxSpeed(10000000000); //set max speed unreachably large so it can't be hit
+  stepper.setSpeed(stepVMax); //set the table to move at max calc speed
+  stepper.setAcceleration(accel); //set max accel
+  stepper.moveTo(amplitudeSteps); //move to one end of travel
 
 
   Serial.println("Starting, hit any button to escape.");
@@ -89,12 +91,13 @@ void resonanceControl(double freqIn, double ampIn) {
     Serial.print(" || ");
     Serial.print(stepper.targetPosition());
 */
-    stepper.run();
+    stepper.run();//send updates to controller
   }
 }
 
 //-----------------------------STOP MOVEMENT-------------------
 boolean halt() {
+  //if user sends something through serial, stop motion
   if (Serial.available() == 0) {
     return true;
     Serial.println("HALTED");
@@ -107,6 +110,7 @@ boolean halt() {
 
 
 //--------------------------------MENU--------------------------
+//this is the main menu the user interacts with, using a switch statement.
 void menu() {
   //------------------------UI----------------------
   int menuSelect = 0;
@@ -167,6 +171,8 @@ void menu() {
         break;
       }
     */
+
+    //BOUNCE (test movement)
     case 3: {
 
         stepper.setEnablePin(7);
@@ -193,6 +199,7 @@ void menu() {
         }
       }
 
+    //SQUARE WAVE CONTROL
     case 4: {
         float uV = 0;
         float uA = 0;
