@@ -49,7 +49,7 @@ All software is written in Arduino's IDE, and uses the AccelStepper Library. The
 Pre-made motion profiles are created as functions, which take the user defined values as inputs. Currently, sine-wave resonance and square wave profiles have been made, to demonstrate the basic functionalities of the shaker table. A switch statement is used for user input to provide easy addition of motion profiles in the future. 
 
 # Sinusoidal (Resonance) Control
-This function controls the motion of the shaker table in a sinusoidal motion. This motion can be used to estimate the natural frequencies of objects, as it moves at a constant, single frequency. 
+This function controls the motion of the shaker table in a sinusoidal motion. This motion can be used to estimate the natural frequencies of objects, as it attempts moves at a constant, single frequency. 
 
 For the Shaker Table, the maximum acceleration is calculated from the given frequency and amplitude. 
 
@@ -61,6 +61,7 @@ To calculate maximum acceleration, this equation is used:
 
     a = (2 * π * f)^2 * A
 
+With the maximum acceleration and velocity calculated from the user inputs, the rest of the programming is straightforward. The table is set to only to move with these values, and moves one step per time increment. The stepper library automatically does the acceleration control when commanded to move to a position, so the only thing left to do is check to see if the target has been reached. If it has, the target position is inverted, and the tables moves in the opposite direction. By controlling the shaker table by only commanding the table to reach a certain velocity with a certain acceleration over a distance, and the calculated values align with the max velocity and acceleration for a sine wave, the table is forced to move in a sine wave motion.
 
 
 # Results
