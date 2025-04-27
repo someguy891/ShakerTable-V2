@@ -65,8 +65,24 @@ With the maximum acceleration and velocity calculated from the user inputs, the 
 
 
 # Results
+Overall, the table does an okay job simulating harmonic motion. Observing the capstone position data, sine waves can be clearly seen in the motion of the table, but the precision of the frequency leaves some to be desired. Using recommended amplitude values, the accuracy of the table can be within +/- .5Hz, meeting the set goal.
+
+The test setup for the shaker table used a Pasco Ultrasonic Distance sensor, which measures the time of flight sound emitted by the sensor. Using Pasco Capstone, the sensor can live record the data onto a position graph, and built in tools allow the user to curve fit a sine wave onto the plot. With the curve fit, an estimate of the frequency and amplitude can be found. 
 
 ![image](https://github.com/user-attachments/assets/4fbc3e71-d5fd-4168-aefc-29e7e5dc6375)
+
+    Positional graph of the table moving at 2 Hz, and .01m amplitude
+
+The table was tested from a range of 1 Hz to 15 Hz. The Shaker table showed that it has an “ideal” operating range, where it moves smoothly without much noise, but also doesn’t try to rattle itself to pieces. At low frequencies (<5 Hz), the table tends to move with a loud grinding noise, coming from the stepper driver. However, at frequencies above 12Hz, a lot of the motion ends up going into the frame of the machine rather than the table. This could be fixed by mounting the machine directly to a lab bench, or adding more weight to the frame. The range between 5-12 Hz is a sweet spot for the table though, and is the ideal operating range for it. When using the recommended amplitudes, the table operates within +/- .5 Hz of the target frequency, with only a few outliers. 
+
+
+![image](https://github.com/user-attachments/assets/b3c5650b-2771-4f5a-85d0-b2238917248b)
+![image](https://github.com/user-attachments/assets/3b7dce98-699d-4e47-968e-0bbc43ad955f)
+
+
+    Results from testing with recommended amplitudes
+
+These results reach the original goals for Shaker Table V2, but there are still many improvements that could be made. It took a lot of tweaking of amplitudes to get the results within the +/- .5 Hz goal, and severely limits the use of the table. The vast majority of this issue could be resolved by using a feedback control based system, rather than blindly driving the stepper motor. Additionally, the Pasco ultrasonic sensor got a lot of external noise due to the frame of the table moving. If a mount was made for the sensor so it could be attached directly to the frame of the table, the accuracy of the data should improve.
 
 
 # Resources
