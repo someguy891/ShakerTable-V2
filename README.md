@@ -48,6 +48,8 @@ All software is written in Arduino's IDE, and uses the AccelStepper Library. The
 
 Pre-made motion profiles are created as functions, which take the user defined values as inputs. Currently, sine-wave resonance and square wave profiles have been made, to demonstrate the basic functionalities of the shaker table. A switch statement is used for user input to provide easy addition of motion profiles in the future. 
 
+The code, "ShakerTableV2Final-TB6600.ino", is commented in detail, and describes most functions of the software.
+
 # Sinusoidal (Resonance) Control
 This function controls the motion of the shaker table in a sinusoidal motion. This motion can be used to estimate the natural frequencies of objects, as it attempts moves at a constant, single frequency. 
 
