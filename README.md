@@ -66,7 +66,8 @@ With the maximum acceleration and velocity calculated from the user inputs, the 
 
 # Results
 
-Coming soon, as the table is still going under testing. 
+![image](https://github.com/user-attachments/assets/4fbc3e71-d5fd-4168-aefc-29e7e5dc6375)
+
 
 # Resources
 AccelStepper Documentation:
