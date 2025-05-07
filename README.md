@@ -71,6 +71,9 @@ With the maximum acceleration and velocity calculated from the user inputs, the 
 # Results
 Overall, the table does an okay job simulating harmonic motion. Observing the capstone position data, sine waves can be clearly seen in the motion of the table, but the precision of the frequency leaves some to be desired. Using recommended amplitude values, the accuracy of the table can be within +/- .5Hz, meeting the set goal.
 
+![20250507_114622](https://github.com/user-attachments/assets/377dfefa-f7b9-4bfc-8b43-03bce374ba27)
+
+
 The test setup for the shaker table used a Pasco Ultrasonic Distance sensor, which measures the time of flight sound emitted by the sensor. Using Pasco Capstone, the sensor can live record the data onto a position graph, and built in tools allow the user to curve fit a sine wave onto the plot. With the curve fit, an estimate of the frequency and amplitude can be found. 
 
 ![image](https://github.com/user-attachments/assets/4fbc3e71-d5fd-4168-aefc-29e7e5dc6375)
