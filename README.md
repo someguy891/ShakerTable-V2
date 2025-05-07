@@ -7,6 +7,8 @@ Shaker Tables are commonly used in environmental testing to prove that a complex
 
 This small, desktop shaker table is made to simulate these vibrations, primarily for teaching demos or small scale testing.
 
+Contact me at thechef0891@gmail.com with any questions.
+
 # Goals
 The goals for this project were outlined as follows:
 
