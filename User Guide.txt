@@ -1,9 +1,0 @@
-Simulation Parameters for Resonance: 
-
-6hz or lower should have an amplitude of .01
-
-7hz to 10hz should have an amplitude no larger than .008
-
-Up to 15hz, .005 should be used, but the motion can get very violent. 
-
-Not recommended to run above 15Hz, unless with very small amplitudes
